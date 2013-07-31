@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F663BFB8-0154-465A-9362-0BF42F2A1D15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HH.Api.PortableLibrary</RootNamespace>
+    <AssemblyName>HH.Api.PortableLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile88</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ApiEntry.cs" />
+    <Compile Include="ApiException.cs" />
+    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="Commands\DictionaryCommand.cs" />
+    <Compile Include="Entities\Metro.cs" />
+    <Compile Include="Entities\Line.cs" />
+    <Compile Include="Entities\MetroList.cs" />
+    <Compile Include="Entities\Station.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Resume.cs" />
+    <Compile Include="Commands\UserCommand.cs" />
+    <Compile Include="Entities\BaseDictionaryEntity.cs" />
+    <Compile Include="Entities\Coordinate.cs" />
+    <Compile Include="Commands\UriDictionary.cs" />
+    <Compile Include="Commands\VacanciesCommand.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Area.cs" />
+    <Compile Include="Entities\BusinessTripReadiness.cs" />
+    <Compile Include="Entities\Dictionaries.cs" />
+    <Compile Include="Entities\Currency.cs" />
+    <Compile Include="Entities\EducationLevel.cs" />
+    <Compile Include="Entities\Employer.cs" />
+    <Compile Include="Entities\EmployerType.cs" />
+    <Compile Include="Entities\Employment.cs" />
+    <Compile Include="Entities\Error.cs" />
+    <Compile Include="Entities\Experience.cs" />
+    <Compile Include="Entities\Gender.cs" />
+    <Compile Include="Entities\LanguageLevel.cs" />
+    <Compile Include="Entities\LogoUrls.cs" />
+    <Compile Include="Entities\MetroSummary.cs" />
+    <Compile Include="Entities\PaggedEntity.cs" />
+    <Compile Include="Entities\PreferredContactType.cs" />
+    <Compile Include="Entities\RelocationType.cs" />
+    <Compile Include="Entities\ResumeAccessType.cs" />
+    <Compile Include="Entities\ResumeContactsSiteType.cs" />
+    <Compile Include="Entities\Salary.cs" />
+    <Compile Include="Entities\Schedule.cs" />
+    <Compile Include="Entities\SiteLang.cs" />
+    <Compile Include="Entities\Specialization.cs" />
+    <Compile Include="Entities\TravelTime.cs" />
+    <Compile Include="Entities\Type.cs" />
+    <Compile Include="Entities\Vacancy.cs" />
+    <Compile Include="Entities\VacancyLabel.cs" />
+    <Compile Include="Entities\VacancySearchField.cs" />
+    <Compile Include="Entities\VacancySearchOrder.cs" />
+    <Compile Include="Entities\VacancyType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net40+sl4+win8+wp71\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\portable-net40+sl4+win8+wp71\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\portable-net40+sl4+win8+wp71\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.8\tools\Microsoft.Bcl.Build.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
