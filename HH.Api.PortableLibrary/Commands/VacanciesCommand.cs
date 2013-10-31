@@ -107,7 +107,7 @@ namespace HH.Api.PortableLibrary.Commands
 				sb.Append(GenerateSequence("schedule", schedules));
 
 			if(areas != null)
-				sb.Append(GenerateSequence("area", areas));
+				sb.Append(GenerateSequence("area", areas));	   
 
 			if(metros != null)
 				sb.Append(GenerateSequence("metro", metros));
